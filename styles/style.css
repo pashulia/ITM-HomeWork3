@@ -1,0 +1,127 @@
+.container {
+    background: #F8F8F8;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 322px;
+}
+
+.container__title {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(270deg, #FFF 0%, #F8F8F8 100%);
+}
+
+.container__title_text {
+    position: absolute;
+    top: 30%;
+    color: #7E7E82;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+
+.container__list {
+    display: flex;
+}
+
+.container__list_card {
+    display: flex;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 0 16px;
+}
+
+.container__nav {
+    margin-left: 16px;
+}
+
+.show-button,
+.hide-button {
+    color: #1B1C21;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-top: 10px; 
+    padding: 10px 20px; 
+    background-color: #F8F8F8;
+    border: none; 
+    cursor: pointer;
+}
+
+.show-button:hover,
+.hide-button:hover {
+    color: #777373;
+}
+
+@media (min-width: 315px) {
+    .container__title {
+        height: 80px;
+    }
+    .container__title_text {
+        padding-left: 16px;
+    }
+    .container__list {
+        display: flex; /* Использование карусели */
+        overflow-x: auto; /* Горизонтальная прокрутка */
+        white-space: nowrap; /* Отключение переноса строк */
+    }
+    .container__list_card {
+        width: 207px;
+        margin-left: 16px; 
+    }
+}
+
+@media (min-width: 767px) {
+    .container__title {
+        height: 56px;
+    }
+    .container__title_text {
+        padding-left: 24px;
+    }
+    .container__list {
+        flex-wrap: wrap;
+    }
+    .container__list_card {
+        width: 183px;
+        margin-left: 24px; 
+    }
+    .container__list_nav {
+        display: none;
+    }
+    .show-button,
+    .hide-button {
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .container__title_text {
+        padding-left: 32px;
+    }
+    .container__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container__list_card {
+        width: 207px;
+        margin-left: 32px; 
+    }
+    .show-button,
+    .hide-button {
+        margin-left: 14px;
+    }
+}

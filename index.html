@@ -315,14 +315,7 @@
 
         function scrollCarousel(index) {
             const carousel = document.querySelector('.container__list');
-            let cardWidth;
-            if (window.matchMedia('(min-width: 320px)').matches) {
-                cardWidth = 240; // Ширина элемента при экране шириной 320px
-            } else if (window.matchMedia('(min-width: 768px)').matches) {
-                cardWidth = 224; // Ширина элемента при экране шириной 768px
-            } else if (window.matchMedia('(min-width: 1120px)').matches) {
-                cardWidth = 240; // Ширина элемента при экране шириной 1120px
-            }
+            let cardWidth = 240;
             carousel.scrollLeft = (index - 1) * cardWidth;
         }
 
